@@ -10,8 +10,5 @@
     "awesome-chat-third-party-libraries-trungquandev"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/trungquan17/awesome-chat-third-party-libraries.git",
-  "ignore": [
-    "README.md"
-  ]
+  "homepage": "https://github.com/trungquan17/awesome-chat-third-party-libraries.git"
 }
