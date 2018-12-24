@@ -1,0 +1,14 @@
+{
+  "name": "peerjs",
+  "homepage": "https://github.com/peers/peerjs",
+  "version": "0.3.14",
+  "_release": "0.3.14",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.3.14",
+    "commit": "aa281474cfb667991e7066279386b69dcf0b7eea"
+  },
+  "_source": "https://github.com/peers/peerjs.git",
+  "_target": "^0.3.14",
+  "_originalSource": "https://github.com/peers/peerjs.git"
+}

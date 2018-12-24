@@ -1,0 +1,17 @@
+{
+  "name": "awesome-chat-third-party-libraries",
+  "version": "1.0.1",
+  "authors": [
+    "Trung Quan <quanlightning17@gmail.com> <https://trungquandev.com>"
+  ],
+  "description": "https://trungquandev.com",
+  "main": "/",
+  "keywords": [
+    "awesome-chat-third-party-libraries-trungquandev"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/trungquan17/awesome-chat-third-party-libraries.git",
+  "ignore": [
+    "README.md"
+  ]
+}
