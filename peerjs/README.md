@@ -1,83 +1,39 @@
-# PeerJS: Simple peer-to-peer with WebRTC #
+# bower-peerjs
 
-PeerJS provides a complete, configurable, and easy-to-use peer-to-peer API built on top of WebRTC, supporting both data channels and media streams.
+Install with `bower`:
 
-### [http://peerjs.com](http://peerjs.com)
-
-## Setup
-
-
-**Include the library**
+```shell
+bower install peerjs
+```
 
 ```html
-<script src="http://cdn.peerjs.com/0.3/peer.js"></script>
+<script src="/bower_components/peerjs/peer.js"></script>
 ```
 
-**Create a Peer**  
-Get a [free API key](http://peerjs.com/peerserver). Your id only needs to be unique to the namespace of your API key.
-```javascript
-var peer = new Peer('pick-an-id', {key: 'myapikey'}); 
-// You can pick your own id or omit the id if you want to get a random one from the server.
-```
+## Documentation
 
-## Data connections
-**Connect**
-```javascript
-var conn = peer.connect('another-peers-id');
-conn.on('open', function(){
-  conn.send('hi!');
-});
-```
-**Receive**
-```javascript
-peer.on('connection', function(conn) {
-  conn.on('data', function(data){
-    // Will print 'hi!'
-    console.log(data);
-  });
-});
-```
+Documentation is available [here](http://peerjs.com/docs).
 
-## Media calls
-**Call**
-```javascript
-navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-navigator.getUserMedia({video: true, audio: true}, function(stream) {
-  var call = peer.call('another-peers-id', stream);
-  call.on('stream', function(remoteStream) {
-    // Show stream in some <video> element.
-  });
-}, function(err) {
-  console.log('Failed to get local stream' ,err);
-});
+## License
 
-```
-**Answer**
-```javascript
-navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-peer.on('call', function(call) {
-  navigator.getUserMedia({video: true, audio: true}, function(stream) {
-    call.answer(stream); // Answer the call with an A/V stream.
-    call.on('stream', function(remoteStream) {
-      // Show stream in some <video> element.
-    });
-  }, function(err) {
-    console.log('Failed to get local stream' ,err);
-  });
-});
-```
-## Links
+The MIT License
 
-### [Documentation / API Reference](http://peerjs.com/docs)
+Copyright (c) 2010-2013 Michelle Bu and Eric Zhang. http://peerjs.com/
 
-### [WebRTC Browser compatibility status](http://peerjs.com/status)
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-### [PeerServer](https://github.com/peers/peerjs-server)
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-### [Discuss PeerJS on our Google Group](https://groups.google.com/forum/?fromgroups#!forum/peerjs)
-
-### [Changelog](https://github.com/peers/peerjs/blob/master/changelog.md)
-
-##License
-PeerJS is licensed under the [MIT License](https://tldrlegal.com/l/mit).
-
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
